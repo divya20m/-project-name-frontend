@@ -1,0 +1,205 @@
+[
+    {
+      "id": "1",
+      "name":"comfy",
+      "rating":"9",
+      "price":"70$",
+      "occasion": "Casual",
+      "style": "Bohemian",
+      "colors": "Blue",
+      "description": "A comfortable bohemian-style dress with vibrant colors for a relaxed day out.",
+      "imageURL": "https://media.istockphoto.com/id/1715021156/photo/serie-of-studio-photos-of-young-female-model-in-cotton-denim-sleeveless-dress-classic-and.jpg?s=612x612&w=0&k=20&c=0gdmMrZX_Ebv7xMX4QPORd7W_2QhXS-cq6q1fK1WCcU="
+    },
+    {
+      "id": "2",
+      "name":"black lady",
+      "rating":"7.7",
+      "price":"100$",
+      "occasion": "Formal",
+      "style": "Elegant",
+      "colors": "Black",          
+      "description": "An elegant black evening gown with silver accents for a formal event.",
+      "imageURL": "https://media.istockphoto.com/id/1158860092/photo/happy-businesswoman-in-formal-clothing.jpg?s=612x612&w=0&k=20&c=eiDv1qYWuSG9qwmH2D8eMxEoaBw4JQBfMPpYW8UROZU="
+    },
+    {
+      "id": "3",
+      "name":"blue office attire",
+      "rating":"8.6",
+      "price":"86$",
+      "occasion": "Workwear",
+      "style": "Professional",
+      "colors": "Navy Blue",
+      "description": "A professional navy blue suit for a day at the office.",
+      "imageURL": "https://media.istockphoto.com/id/177425689/photo/young-businesswoman-having-stomach-ache.jpg?s=612x612&w=0&k=20&c=t0h_a2y4oP9X-NOzay5p58qjMVRTDVK64F29Brxa2P8="
+    },
+    {
+      "id": "4",
+      "name":"Turquoise vacational",
+      "rating":"9.4",
+      "price":"75$",
+      "occasion": "Beach Vacation",
+      "style": "Relaxed",
+      "colors": "Turquoise",
+      "description": "A breezy beach dress with sea-inspired colors for a perfect vacation look.",
+      "imageURL": "https://media.istockphoto.com/id/1472789088/photo/attractive-woman-in-straw-hat-and-waving-skirt-standing-on-sandy-beach.jpg?s=612x612&w=0&k=20&c=gAZ0CNIyfG3BUKWrVw3Q6S1zI2wbw-31YbHQdq_tm-o="
+    },
+      {
+          "id": "5",
+          "name": "Elegant Evening Gown",
+          "rating": "8",
+          "price": "150$",
+          "occasion": "Formal",
+          "style": "Elegant",
+          "colors": "Red",
+          "description": "A stunning red evening gown for formal occasions.",
+          "imageURL": "https://media.istockphoto.com/id/912185942/photo/lady-evening-dress-elegant-woman-in-long-gown-with-tail-well-dressed-fashion-model-white.jpg?s=612x612&w=0&k=20&c=nQVRUcskAg2uk3Pr9GIemT2BKo23uUv_WIxnsOUumCc="
+      },
+      {
+          "id": "6",
+          "name": "Casual Denim Jacket",
+          "rating": "7",
+          "price": "80$",
+          "occasion": "Casual",
+          "style": "Bohemian",
+          "colors": "Navy Blue",
+          "description": "A trendy navy blue denim jacket for a casual look.",
+          "imageURL": "https://media.istockphoto.com/id/1332485631/photo/beautiful-woman-in-casuals-looking-at-camera-and-smiling.jpg?s=612x612&w=0&k=20&c=IDMDEMQ7WlTIAABYkcpd0qhG5WxXurJdDuKo35a6oMI="
+      },
+      {
+          "id": "7",
+          "name": "Bohemian Maxi Dress",
+          "rating": "9",
+          "price": "90$",
+          "occasion": "Casual",
+          "style": "Bohemian",
+          "colors": "Green",
+          "description": "A comfortable bohemian-style maxi dress in green for a relaxed day out.",
+          "imageURL": "https://media.istockphoto.com/id/542836952/photo/summer-fairy-girl-holding-flower-bouquet.jpg?s=612x612&w=0&k=20&c=wAbI-ibitWHe7GyQTAXG5bVSQXZsC4UC_YyU7aySrf4="
+      },
+        {
+          "id": "8",
+          "name":"Elegant Floral Maxi",
+          "rating":"8",
+          "price":"85$",
+          "occasion": "Casual",
+          "style": "Bohemian",
+          "colors": "Red",
+          "description": "A stunning floral maxi dress in an elegant bohemian style, perfect for casual occasions.",
+          "imageURL": "https://media.istockphoto.com/id/1211205407/photo/a-beautiful-young-girl-with-perfect-skin-with-long-hair-in-a-red-dress-lies-on-a-tree-branch.jpg?s=612x612&w=0&k=20&c=6WyicLk_ZFNoi1SL0I2EN-CsitqMA8MKYMh47tKknhE="
+    
+        },
+          {
+              "id": "9",
+              "name": "Sleek Black mini",
+              "rating": "9",
+              "price": "200$",
+              "occasion": "Formal",
+              "style": "Elegant",
+              "colors": "Black",
+              "description": "A classic black tuxedo for formal events.",
+              "imageURL": "https://media.istockphoto.com/id/478127525/photo/cute-mature-woman-in-black-party-dress.jpg?s=612x612&w=0&k=20&c=98qqFOICRyDWL44SdxQ4DO9Jpu-g95Br0Bue0o2Vw60="
+          },
+          {
+              "id": "10",
+              "name": "Chic White Blouse",
+              "rating": "8",
+              "price": "60$",
+              "occasion": "Casual",
+              "style": "Bohemian",
+              "colors": "White",
+              "description": "A stylish white blouse for a casual yet sophisticated look.",
+              "imageURL": "https://media.istockphoto.com/id/677711654/photo/studio-shot-of-beautiful-businesswoman-against-gray-background.jpg?s=612x612&w=0&k=20&c=7ADwKRIFyF_h8XCU8qDXnDpKFTCozl9hmZqXZrF05Mg="
+          },
+          {
+              "id": "11",
+              "name": "Vintage Floral Sundress",
+              "rating": "7",
+              "price": "75$",
+              "occasion": "Casual",
+              "style": "Bohemian",
+              "colors": "Blue Floral",
+              "description": "A charming blue floral sundress with a vintage touch.",
+              "imageURL": "https://media.istockphoto.com/id/1397312809/photo/clothes.jpg?s=612x612&w=0&k=20&c=KYcdgoktkWeVfXMlD5pMVQgMNqsJyJG5CZpTTmU4ch4="
+          },
+          {
+              "id": "12",
+              "name": "Sporty Tracksuit",
+              "rating": "6",
+              "price": "100$",
+              "occasion": "Sportswear",
+              "style": "Sporty",
+              "colors": "Gray",
+              "description": "A comfortable and sporty gray tracksuit for workouts.",
+              "imageURL": "data:image/jpeg;base64,/your-image-url-8"
+          },
+          {
+              "id": "13",
+              "name": "Formal Pinstripe Suit",
+              "rating": "8",
+              "price": "220$",
+              "occasion": "Formal",
+              "style": "Elegant",
+              "colors": "Navy Blue with Pinstripes",
+              "description": "A distinguished navy blue suit with pinstripes for formal events.",
+              "imageURL": "https://media.istockphoto.com/id/1009023022/photo/smiling-adult-businesswoman-with-hands-in-pockets-looking-at-camera-isolated-on-grey.jpg?s=612x612&w=0&k=20&c=Ri5u2AZjkxSuJT28H4jZfhsL_oNl31INCdYIy7jfwPM="
+          },
+          {
+              "id": "14",
+              "name": "Casual Plaid Shirt",
+              "rating": "7",
+              "price": "45$",
+              "occasion": "Casual",
+              "style": "Bohemian",
+              "colors": "Red Plaid",
+              "description": "A trendy red plaid shirt for a laid-back casual look.",
+              "imageURL": "https://media.istockphoto.com/id/899578472/photo/object-on-background.jpg?s=612x612&w=0&k=20&c=aG4HzJp5xYpklBYkbPrJZtEF0fRX6cOBKRBUCf6bR5U="
+          },
+          {
+              "id": "15",
+              "name": "Boho Printed Maxi Skirt",
+              "rating": "9",
+              "price": "70$",
+              "occasion": "Casual",
+              "style": "Bohemian",
+              "colors": "Purple Floral",
+              "description": "A vibrant purple floral maxi skirt with a boho vibe.",
+              "imageURL": "https://media.istockphoto.com/id/1161590325/photo/beautiful-young-woman-in-black-purple-dress-is-walking-in-a-garden-with-blooming-lilac-bushes.jpg?s=612x612&w=0&k=20&c=IonJqmmp6sqT5mKC-LFqWdPzniAqmzR-Q3EU10lJmgY="
+          },
+          {
+              "id": "16",
+              "name": "Casual Striped Sweater",
+              "rating": "7",
+              "price": "55$",
+              "occasion": "Casual",
+              "style": "Bohemian",
+              "colors": "Blue Stripes",
+              "description": "A cozy blue striped sweater for everyday comfort.",
+              "imageURL": "https://media.istockphoto.com/id/474401009/photo/sweater.jpg?s=612x612&w=0&k=20&c=sBS7aOyfNn6IzAu0psxN-IhSUjmpY5zeBLgsLXGvaOM="
+          },
+          {
+              "id": "17",
+              "name": "Glamorous Silver Sequin Dress",
+              "rating": "9",
+              "price": "180$",
+              "occasion": "Formal",
+              "style": "Glamorous",
+              "colors": "Silver",
+              "description": "A stunning silver sequin dress for a glamorous night out.",
+              "imageURL": "data:image/jpeg;base64,/your-image-url-13"
+          },
+          {
+              "id": "18",
+              "name": "Classic Leather Jacket",
+              "rating": "8",
+              "price": "120$",
+              "occasion": "Casual",
+              "style": "Bohemian",
+              "colors": "Brown",
+              "description": "A timeless brown leather jacket for a rugged yet stylish look.",
+              "imageURL": "https://media.istockphoto.com/id/475849196/photo/woman.jpg?s=612x612&w=0&k=20&c=vOSSehvCItAUWHeL-VAfFPpLcpXL1IJDhbTBKePB1O0="
+          }
+      
+      
+  
+  ]
+  
