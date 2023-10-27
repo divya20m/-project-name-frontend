@@ -11,7 +11,7 @@ export function ListInfo() {
   
 
   useEffect(() => {
-    fetch(`http://localhost:9000/dresses/${id}`)
+    fetch(`https://back-end-nodejs.onrender.com/dresses/${id}`)
       .then((res) => {
         if (!res.ok) {
           throw new Error(`HTTP error! Status: ${res.status}`);

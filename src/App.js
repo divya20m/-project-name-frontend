@@ -18,7 +18,7 @@ function App() {
   const [dresses, setDresses] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:9000/dresses")
+    fetch("https://back-end-nodejs.onrender.com/dresses")
       .then((res) => res.json())
       .then((data) => setDresses(data))
       .catch((error) => console.error("Error fetching data:", error));
