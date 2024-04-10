@@ -1,143 +1,150 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
-import Button from "@mui/material/Button";
 import { AllLists } from "./AllLists";
-import { Routes, Route, useNavigate } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { Home } from "./Home";
 import { NotFoundPage } from "./NotFoundPage";
-import { ThemeProvider, createTheme } from "@mui/material/styles";
-import CssBaseline from "@mui/material/CssBaseline";
-import AppBar from "@mui/material/AppBar";
-import Container from "@mui/material/Container";
 import { StyleListing } from "./StyleListing";
 import { ListInfo } from "./ListsInfo";
+import { SignUp } from './SignUp';
+import { EmailLogin } from './EmailLogin';
+import { ForgotPassword } from './ForgotPassword';
+import { MyAccount } from './MyAccount';
+import { ResetPassword } from './ResetPassword';
+import {Cart} from "./Cart";
 
 function App() {
-  const Navigate = useNavigate();
 
   const [dresses, setDresses] = useState([]);
+  const [allusers, setAllusers] = useState([]);
+  const [cartItems, setCartItems] = useState([]);
 
   useEffect(() => {
-    fetch("https://back-end-nodejs.onrender.com/dresses")
+    fetch("https://my-dresses-backend.onrender.com/dresses")
       .then((res) => res.json())
       .then((data) => setDresses(data))
       .catch((error) => console.error("Error fetching data:", error));
   }, []);
 
-  const [mode, setMode] = useState("light");
+  useEffect(() => {
+    fetch("https://my-dresses-backend.onrender.com/users")
+      .then((res) => res.json())
+      .then((data) => setAllusers(data))
+      .catch((error) => console.error('Error fetching users:', error));
+  }, []);
+ 
 
-  const Theme = createTheme({
-    palette: {
-      mode: mode,
-    },
-  });
+const addToCart = async (id) => {
+  try {
+    const userEmail = localStorage.getItem("email");
+    const response = await fetch('https://my-dresses-backend.onrender.com/cart', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: userEmail,
+      },
+      body: JSON.stringify({ id: String(id) }),
+    });
+
+    if (!response.ok) {
+      throw new Error('failed to add items to cart');
+    }
+    setCartItems([...cartItems, id]);
+    
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+
+
+const fetchCartItems = async () => {
+  try {
+    const userEmail = localStorage.getItem("email");
+    const response = await fetch('https://my-dresses-backend.onrender.com/cart', {
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: userEmail, 
+      },
+    });
+
+    if (!response.ok) {
+      throw new Error('failed to fetch cart items');
+    }
+
+    const data = await response.json();
+    setCartItems(data)
+  } catch (error) {
+    console.error( error);
+  }
+};
+
+
+const deletingId = async (id) => {
+  try {
+    const userEmail = localStorage.getItem("email");
+    const response = await fetch(`https://my-dresses-backend.onrender.com/cart/${id}`, {
+      method:"DELETE",
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: userEmail, 
+      },
+    });
+
+    if (!response.ok) {
+      throw new Error('Failed to fetch cart items');
+    }
+
+    const data = await response.json();
+    setCartItems(data)
+  } catch (error) {
+    console.error('Error fetching cart items:', error);
+  }
+};
+
+
 
   return (
-    <ThemeProvider theme={Theme}>
-      <div className="App">
-        <AppBar
-          position="static"
-          style={{
-            backgroundColor: "brown",
-            borderBottom: "solid",
-            height: "40px",
-            width: "100%",
-            display: "inline-table",
-            borderRadius: "10px",
-          }}
-        >
-          <Container maxWidth="xl">
-            <CssBaseline />
-            <Button
-              style={{ color: "white" }}
-              onClick={() => {
-                Navigate("/");
-              }}
-            >
-              Home
-            </Button>
-            <Button
-              style={{ color: "white" }}
-              onClick={() => {
-                Navigate("/dresses");
-              }}
-            >
-              All Dresses
-            </Button>
-            <Button
-              style={{ color: "white" }}
-              onClick={() => {
-                Navigate("/dresses/Bohemian");
-              }}
-            >
-              Bohemian
-            </Button>
-            <Button
-              style={{ color: "white" }}
-              onClick={() => {
-                Navigate("/dresses/Elegant");
-              }}
-            >
-              Elegant
-            </Button>
-            <Button
-              style={{ color: "white" }}
-              onClick={() => {
-                Navigate("/dresses/Professional");
-              }}
-            >
-              Professional
-            </Button>
-            <Button
-              style={{ color: "white" }}
-              onClick={() => {
-                Navigate("/dresses/Relaxed");
-              }}
-            >
-              Relaxed
-            </Button>
-            <Button
-              style={{ position: " absolute", right: " 0%", color: "white" }}
-              onClick={() => {
-                setMode(mode === "light" ? "dark" : "light");
-              }}
-            >
-              {" "}
-              {mode === "light" ? "dark" : "light"} MODE
-            </Button>
-          </Container>
-        </AppBar>
-        
-        
+      <div className="App"> 
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home  />} />
           <Route
             path="/dresses"
-            element={<AllLists dresses={dresses} setDresses={setDresses} />}
+            element={<AllLists dresses={dresses} setDresses={setDresses} addToCart={addToCart} cartItems={cartItems} />}
           />
           <Route
             path="/dresses/Bohemian"
-            element={<StyleListing style="Bohemian" dresses={dresses} />}
+            element={<StyleListing style="Bohemian" dresses={dresses} cartItems={cartItems} addToCart={addToCart} />}
           />
           <Route
             path="/dresses/Elegant"
-            element={<StyleListing style="Elegant" dresses={dresses} />}
+            element={<StyleListing style="Elegant" dresses={dresses} cartItems={cartItems} addToCart={addToCart} />}
           />
           <Route
             path="/dresses/Professional"
-            element={<StyleListing style="Professional" dresses={dresses} />}
+            element={<StyleListing style="Professional" dresses={dresses} cartItems={cartItems} addToCart={addToCart} />}
           />
+          
           <Route
             path="/dresses/Relaxed"
-            element={<StyleListing style="Relaxed" dresses={dresses} />}
+            element={<StyleListing style="Relaxed" dresses={dresses} cartItems={cartItems} addToCart={addToCart} />}
           />
-          <Route path="/dresses/:id" element={<ListInfo dresses={dresses} />} />
+          <Route path="/dresses/:id" element={<ListInfo dress={dresses} />} />
 
           <Route path="*" element={<NotFoundPage />} />
-        </Routes>
+       
+     {/* /////////////////////////////////////////// */}
      
+        <Route path="/users/login" element={<EmailLogin cartItems={cartItems} />} />
+        <Route path="/users/signup" element={<SignUp cartItems={cartItems}/>} />
+        <Route path="/users/forgotPassword" element={<ForgotPassword cartItems={cartItems} />} />
+        <Route path="/users/login/myaccount" element={<MyAccount dresses={dresses} setDresses={setDresses} cartItems={cartItems} addToCart={addToCart} />} />
+        <Route path="/users/reset-password/:email/:token" element={<ResetPassword />} />
+      {/* {//////////////} */}
+        <Route path="/cart" element={<Cart cartItems = { cartItems } fetchCartItems={fetchCartItems} deletingId={deletingId} />} />
+
+        </Routes>
       </div>
-    </ThemeProvider>
   );
 }
 
